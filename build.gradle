@@ -21,6 +21,15 @@ ext {
 	}
 }
 
+
+allprojects {
+	repositories {
+		maven { url 'https://maven.aliyun.com/repository/public/' }
+		mavenLocal()
+		mavenCentral()
+	}
+}
+
 configure(allprojects) { project ->
 	apply plugin: "io.spring.dependency-management"
 
